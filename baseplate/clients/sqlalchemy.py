@@ -191,6 +191,8 @@ class SQLAlchemyEngineContextFactory(ContextFactory):
 
         trace_name = "{}.{}".format(context_name, "execute")
         span = server_span.make_child(trace_name)
+        if len(statement) > 100:
+            statement = statement[:100]
         span.set_tag("statement", statement)
         span.start()
 
