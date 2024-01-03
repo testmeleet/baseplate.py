@@ -24,3 +24,5 @@ types-setuptools==57.0.2
 webtest==2.0.35
 wheel==0.36.2
 fakeredis==1.5.0
+redis>=4.3.6 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
